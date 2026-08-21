@@ -1,62 +1,35 @@
-name: Update GitHub Stats
+name: Update GitHub activity
 
 on:
-  schedule:
-    # 每天自动更新一次
-    - cron: "0 0 * * *"
-
-  # 允许手动运行
   workflow_dispatch:
+  schedule:
+    - cron: "17 2 * * *"
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  update-stats:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Generate GitHub stats
-        uses: stats-organization/github-readme-stats-action@v2
+      - name: Check out profile repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          card: stats
-          options: >-
-            username=Clihef&
-            show_icons=true&
-            rank_icon=github&
-            hide_border=true&
-            border_radius=12&
-            title_color=0f766e&
-            text_color=374151&
-            icon_color=2563eb&
-            bg_color=ffffff
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate top languages
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: >-
-            username=Clihef&
-            layout=compact&
-            langs_count=8&
-            hide_border=true&
-            border_radius=12&
-            title_color=0f766e&
-            text_color=374151&
-            bg_color=ffffff
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit generated cards
+          python-version: "3.12"
+      - name: Generate activity SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_github_stats.py --username Clihef --output profile/github-stats.svg
+      - name: Commit updated activity
         run: |
+          if git diff --quiet -- profile/github-stats.svg; then
+            echo "GitHub activity is already current."
+            exit 0
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add profile/*.svg
-          git commit -m "chore: update GitHub stats" || exit 0
+          git add profile/github-stats.svg
+          git commit -m "chore: update GitHub activity"
           git push

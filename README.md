@@ -1,62 +1,20 @@
-<div align="center">
+# Clihef
 
-  <!-- knock code pictures 敲代码的图片 -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/coding.gif" />
-    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/developer.svg" height="225px" />
-    <img src="https://cdn.jsdelivr.net/gh/sun0225SUN/sun0225SUN/assets/images/coding.gif" />
-  </picture>
+Robotics developer focused on embodied AI, reinforcement learning, robot control, and perception.
 
-  <!-- for beauty 留个空行好看点 -->
-  <div>&nbsp;</div>
+Currently studying Automation Science and Engineering at Beihang University, following undergraduate studies in Aeronautical Science and Engineering.
 
+## Focus
 
-</div>
+- Embodied AI and robot learning
+- Reinforcement learning for control and decision-making
+- Robot driver, control, and perception systems
 
-#  🙋 Hello
+## Selected work
 
-<table>
-  
-<tr><td>
+- [Dueling-DQN-in-Submarine](https://github.com/Clihef/Dueling-DQN-in-Submarine)
+- [fetch-sac-her-robotics](https://github.com/Clihef/fetch-sac-her-robotics)
 
-### 🤺 About Me
+## GitHub activity
 
-
-<p>&emsp;&emsp; Hi, I am <b>May0r</b>. Currently studying at <b>Beihang University<b>.
-<p>&emsp;&emsp; I completed my undergraduate studies at the School of <b>Aeronautical Science and Engineering<b>.
-<p>&emsp;&emsp; And I will continue my graduate in <b>Automation Science and Engineering</b> at this university.
-<p>&emsp;&emsp; My current interests focus on <b>Reinforcement Learning</b> and <b>Embodied Intelligence</b>
-
-
-  <!-- for beauty 留个空行好看点 -->
-  <div>&nbsp;</div>
-
-</td></tr>
-
-<tr><td>
-
-
-
-  <!-- for beauty 留个空行好看点 -->
-  <div>&nbsp;</div>
-  
-</td></tr>
-
-
-
-</table>
-
-## 📊 GitHub Overview
-
-<p align="left">
-  <img
-    height="180"
-    src="./profile/stats.svg"
-    alt="Clihef's GitHub Stats"
-  />
-  <img
-    height="180"
-    src="./profile/top-langs.svg"
-    alt="Clihef's Top Languages"
-  />
-</p>
+<img src="./profile/github-stats.svg" alt="GitHub activity for the last 12 months" width="800" />
