@@ -48,14 +48,15 @@
 
 ## 📊 GitHub Overview
 
-<!-- GitHub 数据统计 -->
-
-<img
-  src="https://github-readme-stats.vercel.app/api?username=Clihef&show_icons=true&rank_icon=github&hide_border=true&border_radius=12&title_color=0f766e&text_color=374151&icon_color=2563eb&bg_color=ffffff"
-  alt="May0r's GitHub Stats"
-/>
-
-<img
-  src="https://github-readme-stats.vercel.app/api/top-langs/?username=Clihef&layout=compact&langs_count=8&hide_border=true&border_radius=12&title_color=0f766e&text_color=374151&bg_color=ffffff"
-  alt="May0r's Top Languages"
-/>
+<p align="left">
+  <img
+    height="180"
+    src="./profile/stats.svg"
+    alt="Clihef's GitHub Stats"
+  />
+  <img
+    height="180"
+    src="./profile/top-langs.svg"
+    alt="Clihef's Top Languages"
+  />
+</p>
